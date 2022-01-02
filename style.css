@@ -1,0 +1,530 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap'); */
+
+@font-face {
+    font-family: 'LucidaGrande';
+    src: url('./src/fonts/LucidaGrande/LucidaGrande.ttf');
+}
+
+* {
+    cursor: none;
+}
+
+:root {
+    width: 100%;
+    height: 100%;
+    --text-color: black;
+    --border-color: rgba(255, 255, 255, 0.363);
+    
+    font-size: 12pt;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'LucidaGrande';
+
+    background-image: url(./src/images/backgrounds/sebastian-svenson-LpbyDENbQQg-unsplash.jpg);
+    /* background-image: url(./src/images/backgrounds/fakurian-design-0_8gAoFrzbw-unsplash.jpg); */
+    /* background-image: url(./src/images/backgrounds/fakurian-design-Bdg_kKtAKig-unsplash.jpg); */
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;   
+}
+
+.cursor {
+    width: 1.2em;
+    height: 1.2em;
+    position: absolute;
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* ----------------------------- HEADER / NAV ----------------------------- */
+
+.links {
+    display: flex;
+    align-items: center;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(228, 228, 228, 0.315), rgba(168, 173, 175, 0.527) 78%);
+    backdrop-filter: blur(2px);
+    width: 100%;
+    box-shadow: inset 0 0 10px rgba(75, 75, 75, 0.075);
+    z-index: 1;
+    position: relative;
+    font-weight: 600;
+    padding: 0.5rem;
+}
+
+.links .link {
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    text-decoration: none;
+    color: var(--text-color);
+    display: flex;
+    transition: 0.5s;
+    background: none;
+    border: none;
+}
+
+.links .link-bold {
+    font-weight: bold;
+}
+
+.links .link:hover {
+    opacity: 0.5;
+}
+
+.links .link .icon {
+    width: 2rem;
+}
+
+.links .right-side {
+    display: flex;
+    margin-left: auto;
+    margin-right: 2rem;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    color: var(--text-color);
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(190, 190, 190, 0.178) 0%, rgba(126, 129, 131, 0.178) 100%);
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: inset 0 0 10px rgba(66, 66, 66, 0.356);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.445);
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* ----------------------------- WINDOW ----------------------------- */
+
+.window {
+    width: 52.4rem;
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 1rem;
+    margin: 0.5vw;
+    align-self: flex-start;
+    overflow: hidden;
+    backdrop-filter: blur(4px);
+    /* position: absolute; */
+    user-select: none;
+}
+
+#window-about, #window-teachers, #window-field_trips, #window-museums, #window-distance_learning, #window-technology_in_class, #window-actions {
+    justify-self: center;
+    justify-items: center;
+    width: calc(52.4rem - 1%);
+    box-sizing: border-box;
+}
+
+#window-founders {
+    justify-self: center;
+    justify-items: center;
+    box-sizing: border-box;
+    width: 98.7vw;
+    /* width: calc((var(--regular-window-size) * 2) - 5%); */
+    margin: auto;
+    margin-top: 0;
+}
+
+.window .top {
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(228, 228, 228, 0.315), rgba(168, 173, 175, 0.527) 78%);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-top: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    box-sizing: border-box;
+    backdrop-filter: blur(2px);
+    padding: 0.2rem;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    padding-left: 1rem;
+    padding-right: 2rem;
+    align-items: center;
+    position: relative;
+}
+
+.window .top .buttons {
+    align-content: center;
+    display: flex;
+}
+
+.window .top .buttons .button {
+    background: none;
+    border: none;
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-shadow: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 0.3rem;
+}
+
+.window .top .buttons .button:first-child {
+    margin-left: 0;
+}
+
+.window .top .buttons .button i {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.window .top .buttons:hover .button .hidden {
+    display: flex;
+}
+
+.window .top .buttons .button .hidden {
+    font-size: 0.7rem;
+    position: absolute;
+    display: none;
+    user-select: none;
+    color: black;
+}
+
+.window .top .title {
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    justify-self: center;
+    color: var(--text-color);
+    text-shadow: none;
+    font-weight: 600;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+}
+
+.window .top .close {
+    color: #ff5c5a;
+}
+
+.window .top .minimize {
+    color: #e2b741;
+}
+
+.window .top .maximize {
+    color: #29c544;
+}
+
+.window .top .disabled {
+    color: #53535338;
+}
+
+.window .main {
+    width: 100%;
+    height: 100%;
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    border-bottom: none;
+    box-shadow: inset 0 0 10px rgba(66, 66, 66, 0.356);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.445);
+    backdrop-filter: blur(3px);
+    box-sizing: border-box; 
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+/*----------------------------- ABOUT -----------------------------*/
+
+.about {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    align-content: flex-start;
+    text-shadow: none;
+}
+
+.about .logo {
+    box-sizing: border-box;
+    max-width: 12rem;
+    object-fit: contain;
+    display: block;
+}
+
+.about .text {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    align-self: baseline;
+    padding-left: 1rem;
+}
+
+.about .text .title {
+    font-size: 1.3rem;
+    padding: 0;
+    margin: 0;
+    flex-basis: 100%;
+}
+
+.about .text .info {
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.about .text .info-long {
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    padding-top: 1rem;
+}
+
+/*----------------------------- TEACHERS -----------------------------*/
+
+.teachers {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    align-content: flex-start;
+    text-shadow: none;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.teachers .logo {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+.teachers .logo .image {
+    max-width: 36rem;
+    object-fit: contain;
+}
+
+.teachers .text {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    align-self: baseline;
+    padding-left: 1rem;
+}
+
+.teachers .text .info-long {
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    padding-top: 1rem;
+}
+
+/*----------------------------- FOUNDERS -----------------------------*/
+
+.founders {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    align-content: flex-start;
+    text-shadow: none;
+    justify-content: center;
+}
+
+.founders .logos {
+    box-sizing: border-box;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.founders .logos .logo {
+    flex-basis: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.founders .logos .logo .image {
+    max-width: 36rem;
+    object-fit: contain;
+    padding: 0;
+    margin: 0;
+}
+
+.founders .text {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    align-self: baseline;
+    padding-left: 1rem;
+}
+
+.founders .text .info-long {
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    padding-top: 1rem;
+}
+
+/* ----------------------------- GALLERY ----------------------------- */
+.gallery {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    align-content: flex-start;
+}
+
+.gallery .view {
+    width: 100%;
+    margin-bottom: 1rem;
+    display: block;
+    position: relative;
+}
+
+.gallery .view .caption {
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.678) 21%, rgba(0, 0, 0, 0.747) 78%);
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: white;
+    border-radius: 0.5rem;
+    text-align: center;
+    /* display: none; */
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.gallery:hover .caption {
+    /* display: flex; */
+    opacity: 1;
+}
+
+.gallery .view .image {
+    width: 36rem;
+    height: 24rem;
+    display: block;
+    margin: auto;
+    /* height: auto; */
+}
+
+.gallery .preview {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    /* filter: grayscale(80%); */
+}
+
+.gallery .preview .image:first-child {
+    border: solid 0.2rem orange;
+}
+
+.gallery .preview .image {
+    box-sizing: border-box;
+    width: 8rem;
+    height: 8rem;
+}
+
+.gallery .preview .image:hover {
+    border: solid 0.2rem rgba(255, 166, 0, 0.822);
+}
+
+/* Responsive */
+
+@media screen and (max-width: 600px) {
+    :root {
+        width: 100%;
+        height: 100%;
+        --text-color: black;
+        --border-color: rgba(255, 255, 255, 0.363);
+        
+        font-size: 7pt;
+    }
+
+    body {
+        background-size: 100% 100%;
+        background-image: url(./src/images/backgrounds/phone2.png);
+        width: 100%;
+        height: 100%;
+    }
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .window {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 100%;
+        /* max-width: 99%; */
+        justify-content: center;
+        justify-self: center;
+        margin: auto;
+    }
+
+    .founders .logos .logo {
+        width: 10rem;
+    }
+
+    .founders .logos .logo .image {
+        width: 100%;
+    }
+
+    .cursor {
+        display: none;
+    }
+
+    #window-field_trips {
+        margin-top: 0.5rem;
+    }
+
+    #window-museums {
+        margin-top: -3rem;
+    }
+
+    #window-distance_learning {
+        margin-top: 2rem;
+    }
+
+    #window-technology_in_class {
+        margin-top: -3rem;
+    }
+
+    #window-actions {
+        margin-top: -3rem;
+    }
+    
+    #window-activities {
+        margin-top: 0.5rem;
+    }
+}
